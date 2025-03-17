@@ -6,18 +6,19 @@ import {
   HStack,
   Text,
   Button,
-  Input,Link,
+  Link,
 } from "@chakra-ui/react";
 import { MainWrapper } from "@/components/ui/MainBackground/MainContainer";
 import {
   ShieldCheck,
-  MoveRight,
-  MoveLeft,
-  Send,
-  Youtube,
-  Instagram,
+  Video,
+  CheckIcon,
+  Scale
 } from "lucide-react";
 export default function Homepage() {
+
+
+
   return (
     <MainWrapper>
       <Box
@@ -46,21 +47,25 @@ export default function Homepage() {
             backgroundSize={"contain"}
           ></Image>
           <Box
-            height={["50%", "30%", "40%", "50%"]}
+            height={["80%", "30%", "40%", "60%"]}
             width={["100%", "80%", "50%", "40%"]}
             display="flex"
             flexDirection="column"
             alignItems="center"
           >
-            <Image src="/Logo.jpeg" height={"40%"} borderRadius={["80px"]}></Image>
+            <Image
+              src="/Logo.jpeg"
+              height={"40%"}
+              borderRadius={["80px"]}
+            ></Image>
             <Text
               fontSize={["35px", "70px"]}
-              fontFamily={["Poppins"]}
-              fontWeight={900}
+              fontFamily={["Tektur"]}
+              fontWeight={600}
               letterSpacing={1}
               color={["#fff"]}
             >
-              BET PHILE
+              BetPhile
             </Text>
             <Text
               width={["80%", "100%"]}
@@ -69,16 +74,13 @@ export default function Homepage() {
               alignItems="center"
               fontFamily="body"
               padding={["30px 0px", "50px 0px"]}
-              fontSize={["10px", "12px", "12px"]}
+              fontSize={["14px", "12px", "20px"]}
               textAlign="center"
               color={"gray.400"}
               fontStyle="italic"
             >
-              "BetPhile is dedicated to providing a safe and legal betting
-              experience. We partner with licensed platforms to ensure
-              transparency and security while promoting responsible betting
-              practices. Our mission is to empower users with the knowledge and
-              tools to bet responsibly and confidently."
+              "BetPhile has been in your selfless service since 2018. Join our
+              community for a profitable betting journey."
             </Text>
             <Box
               display={["flex"]}
@@ -87,315 +89,512 @@ export default function Homepage() {
               alignItems={"center"}
               gap={[1]}
             >
-              <Input
-                placeholder="example123@gmail.com"
-                color={"gray.300"}
-                border={"1px solid #fff"}
-                height={["25px", "40px"]}
-                width={["200px", "500px"]}
-                fontSize={["12px", "18px"]}
-              ></Input>
-              <Button
-                bgColor="blue.500"
-                color="#fff"
-                fontFamily="Poppins"
-                letterSpacing="0.5px"
-                height={["25px", "40px"]}
-                width={["auto"]}
-                fontSize={["12px", "18px"]}
-                _hover={{ bg: "blue.400" }}
-              >
-                Send
-              </Button>
+              {/* Nunito, Arial, sans-serif */}
+              <Link href="https://t.me/+L9OeeHRDgmRjYjRl">
+                <Button
+                  bgColor="blue.500"
+                  color="#fff"
+                  fontFamily="Poppins"
+                  fontWeight={800}
+                  letterSpacing="1px"
+                  height={["40px", "40px"]}
+                  width={["250px", "auto"]}
+                  fontSize={["18px", "20px"]}
+                  _hover={{ bg: "blue.400" }}
+                >
+                  Join Us On Telegram
+                </Button>
+              </Link>
             </Box>
           </Box>
         </HStack>
       </Box>
       <Box
-        height={["50%", "70%"]}
+        height={["40%", "60%"]}
         width={["100%"]}
+        bgColor="#fff"
         display={["flex"]}
-        alignItems={["center"]}
         justifyContent={["center"]}
-        gap={[2, 3]}
-        flexDirection={["row"]}
-        bgColor={"#fff"}
+        alignItems={["center"]}
       >
-        <Button
-          bgColor={"#121212"}
-          borderRadius={"40px"}
-          display={["none", "flex"]}
-          color={"#fff"}
-        >
-          <MoveLeft />
-        </Button>
         <VStack
-          opacity={0.8}
+          height={["100%"]}
+          width={["100%"]}
           display={["flex"]}
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height={["40%", "70%"]}
-          width={["30%", "24%"]} // Responsive width
-          gap={[3, 6]} // Adds consistent spacing between child elements
-          bgColor="#121212" // Light background for contrast
-          borderRadius="lg" // Rounded corners
-          padding={6} // Adds padding inside the container
-          boxShadow="md"
-          // Subtle shadow for depth
+          flexDirection={["column"]}
+          justifyContent={["", "space-around"]}
+          alignItems={["center"]}
         >
-          {/* Header */}
-          <HStack
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={4} // Consistent gap between elements
-          >
-            <Text
-              fontFamily="Poppins"
-              fontSize={["12px", "32px"]} // Responsive font size
-              fontWeight="bold"
-              color="gray.200"
-            >
-              Join Us On
-            </Text>
-          </HStack>
-
-          {/* Telegram Logo and Text */}
           <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            gap={4}
+            height={["10%"]}
+            width={["80%"]}
+            display={["flex"]}
+            justifyContent={["center"]}
+            alignItems={["center"]}
+            padding={["30px 0px"]}
           >
             <Text
-              fontFamily="Poppins"
-              fontSize={["10px", "20px"]} // Responsive font size
-              color="gray.400"
+              fontFamily={["Poppins"]}
+              fontSize={["30px", "40px"]}
+              letterSpacing={["1px"]}
+              textAlign={["center"]}
+              color={["gray.700"]}
               display={["flex"]}
               justifyContent={["center"]}
               alignItems={["center"]}
-              gap={[1, 2]}
-            >
-              Youtube <Youtube size={18} />
-            </Text>
-            <Image
-              src="/Logo.jpeg"
-              height={["30px", "150px"]} // Responsive image size
-              width={["30px", "150px"]} // Ensures the image is square
-              borderRadius="full" // Makes the image circular
-              boxShadow="lg" // Adds a subtle shadow to the image
-              alt="Telegram Logo"
-            />
-          </Box>
+              gap={["10px"]}
+              fontWeight={800}
 
-          {/* Channel Link Button */}
+              // borderBottom={"3px solid black"}
+            >
+              Our Videos <Video size={40} />
+            </Text>
+          </Box>
           <Box
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
+            height={["100%"]}
+            width={["80%", "90%"]}
+            display={["flex"]}
+            flexDirection={["row", "row"]}
+            justifyContent={["flex-start"]}
+            alignItems={["center"]}
+            gap={[10]}
+            overflowX={"auto"}
+            overflowY={"hidden"}
+            white-space="nowrap"
+            padding={["0px 10px"]}
           >
-            <Link href="https://www.youtube.com/@BetPhileFootballBettingTips">
-              <Button
-                width={["60px", "180px"]} // Responsive button width
-                height={["20px", "48px"]} // Fixed height for consistency
-                fontSize={["8px", "16px"]} // Responsive font size
-                bgColor="blue.500" // Primary color for the button
-                color="white"
-                _hover={{ bgColor: "blue.600" }} // Darker shade on hover
-                _active={{ bgColor: "blue.700" }} // Even darker shade on click
-                borderRadius="md" // Slightly rounded corners
-                boxShadow="md" // Subtle shadow for depth
-                // Telegram icon on the left
-              >
-                Channel Link
-              </Button>
+            <Link
+              href="https://www.youtube.com/embed/aozjCfwv_k8"
+              height={["200px", "350px"]}
+              width={["300px", "500px"]}
+              flex="0 0 auto"
+              bgColor={["gray.300"]}
+              borderRadius={["10px"]}
+              display={["flex"]}
+              flexDirection={["column"]}
+              justifyContent={["space-around"]}
+              alignItems={["center"]}
+              _hover={{ bg: "gray.200", padding: "2px 2px" }}
+              transition={["1s ease-in-out"]}
+              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+            >
+              <iframe
+                width="95%"
+                height="95%"
+                src="https://www.youtube.com/embed/aozjCfwv_k8"
+                title="Best Online Betting App for Cricket Betting - 100% Safe and Legal"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </Link>
+            <Link
+              height={["200px", "350px"]}
+              width={["300px", "500px"]}
+              flex="0 0 auto"
+              bgColor={["gray.300"]}
+              borderRadius={["10px"]}
+              display={["flex"]}
+              flexDirection={["column"]}
+              justifyContent={["space-around"]}
+              alignItems={["center"]}
+              _hover={{ bg: "gray.200", padding: "2px 2px" }}
+              transition={["1s ease-in-out"]}
+              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              href="https://www.youtube.com/embed/HZ6FCPiWzyA"
+            >
+              <iframe
+                width="95%"
+                height="95%"
+                src="https://www.youtube.com/embed/HZ6FCPiWzyA"
+                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </Link>
+            <Link
+              height={["200px", "350px"]}
+              width={["300px", "500px"]}
+              flex="0 0 auto"
+              bgColor={["gray.300"]}
+              borderRadius={["10px"]}
+              display={["flex"]}
+              flexDirection={["column"]}
+              justifyContent={["space-around"]}
+              alignItems={["center"]}
+              _hover={{ bg: "gray.200", padding: "2px 2px" }}
+              transition={["1s ease-in-out"]}
+              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+            >
+              <iframe
+                width="95%"
+                height="95%"
+                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </Link>
+            <Link
+              height={["200px", "350px"]}
+              width={["300px", "500px"]}
+              flex="0 0 auto"
+              bgColor={["gray.300"]}
+              borderRadius={["10px"]}
+              display={["flex"]}
+              flexDirection={["column"]}
+              justifyContent={["space-around"]}
+              alignItems={["center"]}
+              _hover={{ bg: "gray.200", padding: "2px 2px" }}
+              transition={["1s ease-in-out"]}
+              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+            >
+              <iframe
+                width="95%"
+                height="95%"
+                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </Link>
+            <Link
+              height={["200px", "350px"]}
+              width={["300px", "500px"]}
+              flex="0 0 auto"
+              bgColor={["gray.300"]}
+              borderRadius={["10px"]}
+              display={["flex"]}
+              flexDirection={["column"]}
+              justifyContent={["space-around"]}
+              alignItems={["center"]}
+              _hover={{ bg: "gray.200", padding: "2px 2px" }}
+              transition={["1s ease-in-out"]}
+              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+            >
+              <iframe
+                width="95%"
+                height="95%"
+                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </Link>
           </Box>
         </VStack>
-        <VStack
+      </Box>
+      <Box
+        height={["100%"]}
+        width={["100%"]}
+        bgColor={"whiteAlpha.950"}
+        color={"black"}
+        display={["flex"]}
+        flexDirection={["column"]}
+        overflow={["auto"]}
+      >
+        <Box
+          width={["100%"]}
           display={["flex"]}
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height={["43%", "80%"]}
-          width={["33%", "29%"]} // Responsive width
-          gap={[3, 6]} // Adds consistent spacing between child elements
-          bgColor="#121212" // Light background for contrast
-          borderRadius="lg" // Rounded corners
-          padding={6} // Adds padding inside the container
-          boxShadow="md"
-          // Subtle shadow for depth
+          justifyContent={["center"]}
+          alignItems={["center"]}
+          padding={["20px 0px"]}
+          gap={[4, 1]}
         >
-          {/* Header */}
-          <HStack
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={4} // Consistent gap between elements
+          <Text
+            fontSize={["25px", "40px"]}
+            fontFamily={["Poppins"]}
+            fontWeight={600}
           >
-            <Text
-              fontFamily="Poppins"
-              fontSize={["12px", "32px"]} // Responsive font size
-              fontWeight="bold"
-              color="gray.200"
-            >
-              Join Us On
-            </Text>
-          </HStack>
-
-          {/* Telegram Logo and Text */}
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            gap={4}
-          >
-            <Text
-              fontFamily="Poppins"
-              fontSize={["10px", "20px"]} // Responsive font size
-              color="gray.400"
-              display={["flex"]}
-              alignItems={["center"]}
-              justifyContent={["center"]}
-              gap={[1, 2]}
-            >
-              Telegram
-              <Send size={18} />
-            </Text>
+            Legal Betting Websites
+          </Text>
+          <Scale size={50} />
+        </Box>
+        <Box
+          display="flex"
+          flexDirection={["column", "row"]}
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          maxWidth="1200px"
+          margin="auto"
+          // borderRadius="10px"
+          // boxShadow="md"
+          borderBottom={["1px solid black"]}
+          padding={["10px 5px"]}
+          gap={2}
+        >
+          {/* Left Side - Logo and Ratings */}
+          <VStack align="flex-start">
             <Image
-              src="/Logo.jpeg"
-              height={["30px", "150px"]} // Responsive image size
-              width={["30px", "150px"]} // Ensures the image is square
-              borderRadius="full" // Makes the image circular
-              boxShadow="lg" // Adds a subtle shadow to the image
-              alt="Telegram Logo"
+              src="https://www.thetopbookies.com/storage/reviews/21/logo/p9LFFIRTO8wN8envEpnP04sPMEx6kQoBDxH40o4I.webp"
+              alt="1WIN"
+              width="120px"
+              borderRadius={8}
             />
-          </Box>
+            <HStack>
+              {Array(5)
+                .fill(0)
+                .map((_, i) => (
+                  <Text key={i} fontSize="20px" color="yellow.400">
+                    ★
+                  </Text>
+                ))}
+            </HStack>
+          </VStack>
 
-          {/* Channel Link Button */}
-          <Box
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Link href="https://t.me/+L9OeeHRDgmRjYjRl">
+          {/* Middle - Promo Offer */}
+          <VStack textAlign="center">
+            <Text fontSize={["16px", "20px"]} fontWeight="bold">
+              100% up to ₹66,000 on your 1st Deposit - Exclusive
+            </Text>
+            <Text fontSize={["16px", "18px"]} fontWeight="bold">
+              Promo Code:{" "}
+              <Text as="span" color="orange.500">
+                FDBONUS
+              </Text>
+            </Text>
+            <VStack align="flex-start" fontSize={["14px", ""]}>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Best choice for Indian Betting</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Highest odds</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Fastest withdrawal and permanent promotions</Text>
+              </HStack>
+            </VStack>
+            <HStack>
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/3/vORF2arFblaJpj21q24WSut373QlSVzK60hWrCcJ.png"
+                alt="MasterCard"
+                width={["30px", "40px"]}
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/4/Ejy3G4LWP68sluQLGZ5TQ9c2bQzGDzT8RtaFCUA9.webp"
+                alt="Airtel"
+                width={["30px", "40px"]}
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/5/pd78QJrCn0hGwdUyLdbeHQPMzHeLvBZkjKsmofaC.jpeg"
+                alt="UPI"
+                width={["30px", "40px"]}
+              />
+            </HStack>
+          </VStack>
+
+          {/* Right Side - Button and Review */}
+          <VStack>
+            <Link href="https://megapari-100485.top/en/registration?type=email&bonus=SPORT">
               <Button
-                width={["60px", "180px"]} // Responsive button width
-                height={["20px", "48px"]} // Fixed height for consistency
-                fontSize={["8px", "16px"]} // Responsive font size
-                bgColor="blue.500" // Primary color for the button
-                color="white"
-                _hover={{ bgColor: "blue.600" }} // Darker shade on hover
-                _active={{ bgColor: "blue.700" }} // Even darker shade on click
-                borderRadius="md" // Slightly rounded corners
-                boxShadow="md" // Subtle shadow for depth
-                // Telegram icon on the left
+                backgroundColor="yellow.400"
+                borderRadius="50px"
+                padding={["0px 100px", "15px 30px"]}
+                fontSize={["12px", "14px"]}
               >
-                Channel Link
+                PLAY NOW
               </Button>
             </Link>
-          </Box>
-        </VStack>
-        <VStack
-          opacity={0.8}
-          display={["flex"]}
-          flexDirection="column"
-          justifyContent="center"
+          </VStack>
+        </Box>
+        <Box
+          display="flex"
+          flexDirection={["column", "row"]}
+          justifyContent="space-between"
           alignItems="center"
-          height={["40%", "70%"]}
-          width={["30%", "24%"]} // Responsive width
-          gap={[3, 6]} // Adds consistent spacing between child elements
-          bgColor="#121212" // Light background for contrast
-          borderRadius="lg" // Rounded corners
-          padding={6} // Adds padding inside the container
-          boxShadow="md"
-          // Subtle shadow for depth
+          width="100%"
+          maxWidth="1200px"
+          margin="auto"
+          borderBottom={["1px solid black"]}
+          padding={["10px 5px"]}
+          gap={2}
         >
-          {/* Header */}
-          <HStack
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={4} // Consistent gap between elements
-          >
-            <Text
-              fontFamily="Poppins"
-              fontSize={["12px", "32px"]} // Responsive font size
-              fontWeight="bold"
-              color="gray.200"
-            >
-              Join Us On
-            </Text>
-          </HStack>
-
-          {/* Telegram Logo and Text */}
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            gap={4}
-          >
-            <Text
-              fontFamily="Poppins"
-              fontSize={["10px", "20px"]} // Responsive font size
-              color="gray.400"
-              display={["flex"]}
-              justifyContent={["center"]}
-              alignItems={["center"]}
-              gap={[1, 2]}
-            >
-              Instagram <Instagram size={18}/>           
-               </Text>
+          {/* Left Side - Logo and Ratings */}
+          <VStack align="flex-start">
             <Image
-              src="/Logo.jpeg"
-              height={["30px", "150px"]} // Responsive image size
-              width={["30px", "150px"]} // Ensures the image is square
-              borderRadius="full" // Makes the image circular
-              boxShadow="lg" // Adds a subtle shadow to the image
-              alt="Telegram Logo"
+              src="https://www.thetopbookies.com/storage/reviews/16/logo/2Ly1swLFnMcBdN9OurqJa1kSO8Objl6BKOxNSOUh.webp"
+              alt="PARIMATCH"
+              width="120px"
+              borderRadius={8}
             />
-          </Box>
+            <HStack>
+              {Array(5)
+                .fill(0)
+                .map((_, i) => (
+                  <Text key={i} fontSize={["14px", "20px"]} color="yellow.400">
+                    ★
+                  </Text>
+                ))}
+            </HStack>
+          </VStack>
 
-          {/* Channel Link Button */}
-          <Box
-            width="100%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Button
-              width={["60px", "180px"]} // Responsive button width
-              height={["20px", "48px"]} // Fixed height for consistency
-              fontSize={["8px", "16px"]} // Responsive font size
-              bgColor="blue.500" // Primary color for the button
-              color="white"
-              _hover={{ bgColor: "blue.600" }} // Darker shade on hover
-              _active={{ bgColor: "blue.700" }} // Even darker shade on click
-              borderRadius="md" // Slightly rounded corners
-              boxShadow="md" // Subtle shadow for depth
-              // Telegram icon on the left
-            >
-              Channel Link
-            </Button>
-          </Box>
-        </VStack>
-        <Button
-          bgColor={"#121212"}
-          borderRadius={"40px"}
-          display={["none", "flex"]}
-          color={"#fff"}
+          {/* Middle - Promo Offer */}
+          <VStack textAlign="center">
+            <Text fontSize={["16px", "20px"]} fontWeight="bold">
+              100% up to ₹66,000 on your 1st Deposit - Exclusive
+            </Text>
+            <Text fontSize={["16px", "18px"]} fontWeight="bold">
+              Promo Code:{" "}
+              <Text as="span" color="orange.500">
+                FDBONUS
+              </Text>
+            </Text>
+            <VStack align="flex-start" fontSize={["14px", ""]}>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Best choice for Indian Betting</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Highest odds</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Fastest withdrawal and permanent promotions</Text>
+              </HStack>
+            </VStack>
+            <HStack>
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/3/vORF2arFblaJpj21q24WSut373QlSVzK60hWrCcJ.png"
+                alt="MasterCard"
+                width="40px"
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/4/Ejy3G4LWP68sluQLGZ5TQ9c2bQzGDzT8RtaFCUA9.webp"
+                alt="Airtel"
+                width="40px"
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/5/pd78QJrCn0hGwdUyLdbeHQPMzHeLvBZkjKsmofaC.jpeg"
+                alt="UPI"
+                width="50px"
+              />
+            </HStack>
+          </VStack>
+
+          {/* Right Side - Button and Review */}
+          <VStack>
+            <Link href="https://pari-matchin.com/en/regtel/1/?qtag=a2478_t2832_c1715_s&x_pm_click=4b93af3e36f3aab46985f9e4182c0580&redirect_creative_id=1715">
+              <Button
+                backgroundColor="yellow.400"
+                borderRadius="50px"
+                padding={["0px 100px", "15px 30px"]}
+                fontSize={["12px", "14px"]}
+              >
+                PLAY NOW
+              </Button>
+            </Link>
+
+          </VStack>
+        </Box>
+        <Box
+          display="flex"
+          flexDirection={["column", "row"]}
+          justifyContent="space-between"
+          alignItems="center"
+          width="100%"
+          maxWidth="1200px"
+          margin="auto"
+          borderBottom={["1px solid black"]}
+          padding={["10px 5px"]}
+          gap={2}
         >
-          <MoveRight />
-        </Button>
+          {/* Left Side - Logo and Ratings */}
+          <VStack align="flex-start">
+            <Image
+              src="https://v1.bundlecdn.com/img/1win-normal.d39105a87.svg"
+              alt="1WIN"
+              width="120px"
+              bgColor={"#171F34"}
+              borderRadius={8}
+            />
+            <HStack>
+              {Array(5)
+                .fill(0)
+                .map((_, i) => (
+                  <Text key={i} fontSize="20px" color="yellow.400">
+                    ★
+                  </Text>
+                ))}
+            </HStack>
+          </VStack>
+
+          {/* Middle - Promo Offer */}
+          <VStack textAlign="center">
+            <Text fontSize={["16px", "20px"]} fontWeight="bold">
+              100% up to ₹66,000 on your 1st Deposit - Exclusive
+            </Text>
+            <Text fontSize={["16px", "18px"]} fontWeight="bold">
+              Promo Code:{" "}
+              <Text as="span" color="orange.500">
+                FDBONUS
+              </Text>
+            </Text>
+            <VStack align="flex-start" fontSize={["14px", ""]}>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Best choice for Indian Betting</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Highest odds</Text>
+              </HStack>
+              <HStack>
+                <CheckIcon color="green.500" />
+                <Text>Fastest withdrawal and permanent promotions</Text>
+              </HStack>
+            </VStack>
+            <HStack>
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/3/vORF2arFblaJpj21q24WSut373QlSVzK60hWrCcJ.png"
+                alt="MasterCard"
+                width={["30px", "40px"]}
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/4/Ejy3G4LWP68sluQLGZ5TQ9c2bQzGDzT8RtaFCUA9.webp"
+                alt="Airtel"
+                width={["30px", "40px"]}
+              />
+              <Image
+                src="https://www.thetopbookies.com/storage/payment-methods/5/pd78QJrCn0hGwdUyLdbeHQPMzHeLvBZkjKsmofaC.jpeg"
+                alt="UPI"
+                width={["30px", "40px"]}
+              />
+            </HStack>
+          </VStack>
+
+          {/* Right Side - Button and Review */}
+          <VStack>
+            <Link href="https://1wrjmw.com/?p=ibzg">
+              <Button
+                backgroundColor="yellow.400"
+                borderRadius="50px"
+                padding={["0px 100px", "15px 30px"]}
+                fontSize={["12px", "14px"]}
+              >
+                PLAY NOW
+              </Button>
+            </Link>
+
+         
+          </VStack>
+        </Box>
       </Box>
       <Box
         height={["auto", "70%"]} // Responsive height
@@ -513,129 +712,6 @@ export default function Homepage() {
         </VStack>
       </Box>
       <Box
-        height={["70%", "60%"]}
-        width={["100%"]}
-        bgColor="#fff"
-        display={["flex"]}
-        justifyContent={["center"]}
-        alignItems={["center"]}
-      >
-        <VStack
-          height={["100%"]}
-          width={["100%"]}
-          display={["flex"]}
-          flexDirection={["column"]}
-          justifyContent={["", "space-around"]}
-          alignItems={["center"]}
-        >
-          <Box
-            height={["10%"]}
-            width={["80%"]}
-            display={["flex"]}
-            justifyContent={["center"]}
-            alignItems={["center"]}
-          >
-            <Text
-              fontFamily={["Poppins"]}
-              fontSize={["30px", "40px"]}
-              letterSpacing={["1px"]}
-              textAlign={["center"]}
-              color={["gray.700"]}
-              display={["flex"]}
-              justifyContent={["center"]}
-              alignItems={["center"]}
-              gap={["10px"]}
-              fontWeight={800}
-              borderBottom={"3px solid black"}
-            >
-              Our Videos
-            </Text>
-          </Box>
-          <Box
-            height={["60%"]}
-            width={["90%", "90%"]}
-            display={["flex"]}
-            flexDirection={["column", "row"]}
-            justifyContent={["space-around"]}
-            alignItems={["center"]}
-            gap={[10]}
-          >
-            <Box
-              height={["40%", "90%"]}
-              width={["80%", "100%"]}
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-            >
-              <iframe
-                width="90%"
-                height="90%"
-                src="https://www.youtube.com/embed/aozjCfwv_k8"
-                title="Best Online Betting App for Cricket Betting - 100% Safe and Legal"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Box>
-            <Box
-              height={["40%", "90%"]}
-              width={["80%", "100%"]}
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-            >
-              <iframe
-                width="90%"
-                height="90%"
-                src="https://www.youtube.com/embed/HZ6FCPiWzyA"
-                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Box>
-            <Box
-              height={["40%", "90%"]}
-              width={["80%", "100%"]}
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-            >
-              <iframe
-                width="90%"
-                height="90%"
-                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
-                title="1xbet Reality : Best online betting app in India? Online cricket betting apps in India"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Box>
-          </Box>
-        </VStack>
-      </Box>
-      <Box
         height={["auto", "50%"]} // Compact height
         width="100%"
         display="flex"
@@ -669,7 +745,7 @@ export default function Homepage() {
           {/* FAQ Items */}
           <VStack
             width="100%"
-             // Compact spacing between FAQ items
+            // Compact spacing between FAQ items
           >
             {/* FAQ 1 */}
             <Box

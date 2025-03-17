@@ -1,6 +1,6 @@
 'use client'
 
-import { Poppins, Open_Sans, Roboto, Rubik } from "next/font/google";
+import { Poppins, Open_Sans, Roboto, Rubik ,Tektur} from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import { useEffect } from "react";
@@ -10,6 +10,12 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"], // Specify the font weights you need
   subsets: ["latin"], // Specify the subset(s) you need
   variable: "--font-poppins", // Define a CSS variable for the font
+});
+
+const tektur = Tektur({
+  weight: ["400", "500", "600", "700"], // Specify the font weights you need
+  subsets: ["latin"], // Specify the subset(s) you need
+  variable: "--font-tektur", // Define a CSS variable for the font
 });
 
 const opensans = Open_Sans({
@@ -44,11 +50,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      
         <title>Bet Phile</title>
       </head>
       <body
-        className={` ${poppins.variable} ${opensans.variable} ${roboto.variable} ${rubik.variable} ant antialiased`}
+        className={` ${poppins.variable} ${opensans.variable} ${roboto.variable} ${rubik.variable}  ${tektur.variable} ant antialiased`}
       >
         <Provider>{children}</Provider>
       </body>
