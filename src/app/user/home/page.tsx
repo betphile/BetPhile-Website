@@ -314,13 +314,14 @@ export default function Homepage() {
         </VStack>
       </Box>
       <Box
-        height={["140%","120%","100%"]}
+        // height={["140%","120%","100%"]}
+        maxHeight={["180%"]}
         width={["100%"]}
         bgColor={"whiteAlpha.950"}
         color={"black"}
         display={["flex"]}
         flexDirection={["column"]}
-        overflow={["auto"]}
+      
       >
         <Box
           width={["100%"]}
@@ -351,7 +352,6 @@ export default function Homepage() {
           // boxShadow="md"
           borderBottom={["1px solid black"]}
           padding={["10px 5px"]}
-          gap={2}
         >
           {/* Left Side - Logo and Ratings */}
           <VStack align="flex-start">
