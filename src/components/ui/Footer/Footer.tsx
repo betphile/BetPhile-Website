@@ -30,11 +30,11 @@ export const GetFooter = () => {
       {/* Footer Bottom */}
       <Box textAlign="center" mt={4} color="gray.400">
         <Text fontSize="sm">
-          Bet Phile promotes safe and legal betting | 18+ Only |
+          BetPhile promotes safe and legal betting | 18+ Only |
           Geo-Restrictions Apply
         </Text>
         <Text fontSize="sm" mt={2}>
-          © 2025 Bet Phile. All rights reserved.
+          © 2025 BetPhile. All rights reserved.
         </Text>
       </Box>
     </Box>

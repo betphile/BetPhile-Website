@@ -1,10 +1,15 @@
-'use client'
-
-import { Poppins, Open_Sans, Roboto, Rubik ,Tektur} from "next/font/google";
+import { Poppins, Open_Sans, Roboto, Rubik, Tektur } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "BetPhile",
+  description:
+    "BetPhile has been in your selfless service since 2018. Join our community for a profitable betting journey.x",
+};
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"], // Specify the font weights you need
@@ -35,23 +40,14 @@ const rubik = Rubik({
   variable: "--font-Rubik", // Define a CSS variable for the font
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
 
-  const router = useRouter();
-  useEffect(() => {
-    router.push("/user/home");
-  }, [router]);
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <title>Bet Phile</title>
-      </head>
       <body
         className={` ${poppins.variable} ${opensans.variable} ${roboto.variable} ${rubik.variable}  ${tektur.variable} ant antialiased`}
       >
