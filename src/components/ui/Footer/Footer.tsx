@@ -21,12 +21,11 @@ export const GetFooter = () => {
           <Link href="/user/about-us">| About Us |</Link>
           <Link href="/compliance">| Compliance |</Link>
           <Link href="/user/contact">| Contact Us |</Link>
-          <Link href="/user/responsible-gaming">| Responsible Gaming |</Link>
+          <Link href="https://www.gambleaware.org/home/">| Responsible Gaming |</Link>
           <Link href="/user/faq">| FAQ |</Link>
         </Stack>
       </Flex>
       {/* Legal Notice */}
-    
 
       {/* Footer Bottom */}
       <Box textAlign="center" mt={4} color="gray.400">
