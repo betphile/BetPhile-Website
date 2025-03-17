@@ -314,7 +314,7 @@ export default function Homepage() {
         </VStack>
       </Box>
       <Box
-        height={["120%","100%"]}
+        height={["140%","120%","100%"]}
         width={["100%"]}
         bgColor={"whiteAlpha.950"}
         color={"black"}
