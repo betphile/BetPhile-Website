@@ -7,13 +7,16 @@ import {
   Text,
   Button,
   Link,
+  
 } from "@chakra-ui/react";
 import { MainWrapper } from "@/components/ui/MainBackground/MainContainer";
 import {
   ShieldCheck,
   Video,
   CheckIcon,
-  Scale
+  Scale,
+  ArrowBigLeft,
+  ArrowBigRight
 } from "lucide-react";
 export default function Homepage() {
 
@@ -150,154 +153,168 @@ export default function Homepage() {
               Our Videos <Video size={40} />
             </Text>
           </Box>
-          <Box
+          <HStack
             height={["100%"]}
-            width={["80%", "90%"]}
+            width={["100%", "90%"]}
             display={["flex"]}
-            flexDirection={["row", "row"]}
-            justifyContent={["flex-start"]}
-            alignItems={["center"]}
-            gap={[10]}
-            overflowX={"auto"}
-            overflowY={"hidden"}
-            white-space="nowrap"
-            padding={["0px 10px"]}
+            justifyContent={["center"]}
+            padding={["0px 5px"]}
           >
-            <Link
-              href="https://www.youtube.com/embed/aozjCfwv_k8"
-              height={["200px", "350px"]}
-              width={["300px", "500px"]}
-              flex="0 0 auto"
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
+            <Button padding={["5px 5px"]} boxShadow={"md"}>
+              <ArrowBigLeft size={80} />
+            </Button>
+            <Box
+              height={["100%"]}
+              width={["80%", "90%"]}
               display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
+              flexDirection={["row", "row"]}
+              justifyContent={["flex-start"]}
               alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              gap={[10]}
+              overflowX={"auto"}
+              overflowY={"hidden"}
+              white-space="nowrap"
+              padding={["0px 10px"]}
             >
-              <iframe
-                width="95%"
-                height="95%"
-                src="https://www.youtube.com/embed/aozjCfwv_k8"
-                title="Best Online Betting App for Cricket Betting - 100% Safe and Legal"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Link>
-            <Link
-              height={["200px", "350px"]}
-              width={["300px", "500px"]}
-              flex="0 0 auto"
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-              href="https://www.youtube.com/embed/HZ6FCPiWzyA"
-            >
-              <iframe
-                width="95%"
-                height="95%"
-                src="https://www.youtube.com/embed/HZ6FCPiWzyA"
-                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Link>
-            <Link
-              height={["200px", "350px"]}
-              width={["300px", "500px"]}
-              flex="0 0 auto"
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
-            >
-              <iframe
-                width="95%"
-                height="95%"
-                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
-                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Link>
-            <Link
-              height={["200px", "350px"]}
-              width={["300px", "500px"]}
-              flex="0 0 auto"
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
-            >
-              <iframe
-                width="95%"
-                height="95%"
-                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
-                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Link>
-            <Link
-              height={["200px", "350px"]}
-              width={["300px", "500px"]}
-              flex="0 0 auto"
-              bgColor={["gray.300"]}
-              borderRadius={["10px"]}
-              display={["flex"]}
-              flexDirection={["column"]}
-              justifyContent={["space-around"]}
-              alignItems={["center"]}
-              _hover={{ bg: "gray.200", padding: "2px 2px" }}
-              transition={["1s ease-in-out"]}
-              boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
-              href="https://www.youtube.com/embed/Kgcn8e8DtN8"
-            >
-              <iframe
-                width="95%"
-                height="95%"
-                src="https://www.youtube.com/embed/Kgcn8e8DtN8"
-                title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </Link>
-          </Box>
+              <Link
+                href="https://www.youtube.com/embed/aozjCfwv_k8"
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/aozjCfwv_k8"
+                  title="Best Online Betting App for Cricket Betting - 100% Safe and Legal"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+              <Link
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+                href="https://www.youtube.com/embed/HZ6FCPiWzyA"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/HZ6FCPiWzyA"
+                  title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+              <Link
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+                href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                  title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+              <Link
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+                href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                  title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+              <Link
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+                href="https://www.youtube.com/embed/Kgcn8e8DtN8"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/Kgcn8e8DtN8"
+                  title="1xbet Cricket Betting tips in Hindi | Online cricket betting tricks to win | Online betting strategy"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+            </Box>
+            <Button padding={["5px 5px"]} boxShadow={"md"}>
+              <ArrowBigRight size={80} />
+            </Button>
+          </HStack>
         </VStack>
       </Box>
       <Box
-        height={["100%"]}
+        height={["120%","100%"]}
         width={["100%"]}
         bgColor={"whiteAlpha.950"}
         color={"black"}
@@ -500,7 +517,6 @@ export default function Homepage() {
                 PLAY NOW
               </Button>
             </Link>
-
           </VStack>
         </Box>
         <Box
@@ -591,8 +607,6 @@ export default function Homepage() {
                 PLAY NOW
               </Button>
             </Link>
-
-         
           </VStack>
         </Box>
       </Box>

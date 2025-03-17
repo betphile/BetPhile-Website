@@ -9,7 +9,7 @@ interface MainWrapperProps {
 
 export const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
   return (
-    <Box height="120vh" width="100%" overflow={["auto"]}>
+    <Box height="120vh" width="100%">
       <GetNavbar />
       {children}
       <GetFooter/>
