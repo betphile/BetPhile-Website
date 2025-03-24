@@ -1,8 +1,6 @@
 import { Poppins, Open_Sans, Roboto, Rubik, Tektur } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
-
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

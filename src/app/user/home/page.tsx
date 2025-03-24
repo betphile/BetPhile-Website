@@ -177,6 +177,31 @@ export default function Homepage() {
               padding={["0px 10px"]}
             >
               <Link
+                href="https://www.youtube.com/embed/sy0W_UbfWWc"
+                height={["180px", "350px"]}
+                width={["250px", "500px"]}
+                flex="0 0 auto"
+                bgColor={["gray.300"]}
+                borderRadius={["10px"]}
+                display={["flex"]}
+                flexDirection={["column"]}
+                justifyContent={["space-around"]}
+                alignItems={["center"]}
+                _hover={{ bg: "gray.200", padding: "2px 2px" }}
+                transition={["1s ease-in-out"]}
+                boxShadow="0px 0px 10px 1px rgba(0, 0, 0, 0.5)"
+              >
+                <iframe
+                  width="95%"
+                  height="95%"
+                  src="https://www.youtube.com/embed/sy0W_UbfWWc"
+                  title="Stop losing money on Online Betting Apps !!"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </Link>
+              <Link
                 href="https://www.youtube.com/embed/aozjCfwv_k8"
                 height={["180px", "350px"]}
                 width={["250px", "500px"]}
@@ -321,7 +346,6 @@ export default function Homepage() {
         color={"black"}
         display={["flex"]}
         flexDirection={["column"]}
-      
       >
         <Box
           width={["100%"]}
